@@ -46,7 +46,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Crie sua página personalizada no formato <code className="bg-slate-800 text-blue-300 px-2 py-0.5 rounded text-base">linkfacil.com/seu-negocio</code>. Organize redes sociais e receba pedidos no WhatsApp com 1 clique.
+            Crie sua página personalizada no formato <code className="bg-slate-800 text-blue-300 px-2 py-0.5 rounded text-base">linkfacil-rho.vercel.app/seu-negocio</code>. Organize redes sociais e receba pedidos no WhatsApp com 1 clique.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

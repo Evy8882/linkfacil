@@ -1,12 +1,21 @@
 # 🚀 LinkFácil - Centralizador de Links & Catálogo no WhatsApp
 
-> 📌 **Nota Acadêmica**: Este projeto é uma **simulação de software SaaS (Software as a Service)** desenvolvida exclusivamente como atividade prática para o **Curso Técnico em Desenvolvimento de Sistemas**. Não possui cobranças reais nem integrações com gateways de pagamento de produção.
+> 🌐 **Deploy em Produção (Vercel)**: [https://linkfacil-rho.vercel.app/](https://linkfacil-rho.vercel.app/)  
+> 🔗 **API Backend (Render)**: [https://linkfacil.onrender.com/](https://linkfacil.onrender.com/)  
+> 📌 **Nota Acadêmica**: Este projeto é uma **simulação de software SaaS (Software as a Service)** desenvolvida exclusivamente como atividade prática para o **Curso Técnico em Desenvolvimento de Sistemas**.
+
+---
+
+## 👥 Autores do Projeto
+
+* 👨‍💻 **Everton Nascimento Mancio**
+* 👨‍💻 **Rafael D'Angelo Gradilone Pontes**
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O **LinkFácil** é uma plataforma desenvolvida para microempreendedores e pequenos negócios criarem uma página única no formato `linkfacil.com/[slug]`. A solução permite organizar links de contato e exibir um **mini-catálogo de produtos** com botão de pedido direto no WhatsApp (`https://wa.me/...`).
+O **LinkFácil** é uma plataforma desenvolvida para microempreendedores e pequenos negócios criarem uma página única no formato `linkfacil-rho.vercel.app/[slug]`. A solução permite organizar links de contato e exibir um **mini-catálogo de produtos** com botão de pedido direto no WhatsApp (`https://wa.me/...`).
 
 ---
 
@@ -49,53 +58,18 @@ O **LinkFácil** é uma plataforma desenvolvida para microempreendedores e peque
 
 ---
 
-## 📂 Estrutura do Repositório
-
-```text
-linkfacil/
-├── backend/
-│   ├── prisma/
-│   │   ├── dev.db              # Banco de dados SQLite
-│   │   └── schema.prisma       # Modelagem relacional do Prisma
-│   ├── src/
-│   │   ├── config/             # Instância do Prisma Client
-│   │   ├── controllers/        # Controladores (Auth, Profile, Links, Products, Subscription, Public)
-│   │   ├── middlewares/        # Autenticação JWT e Trava de Planos (planGuard)
-│   │   ├── routes/             # Definição das rotas da API REST
-│   │   ├── seed.ts             # Script para povoar dados de teste
-│   │   └── server.ts           # Inicialização do servidor Express
-│   ├── package.json
-│   └── tsconfig.json
-│
-└── frontend/
-    ├── app/
-    │   ├── (auth)/             # Telas de Login e Cadastro
-    │   ├── (dashboard)/        # Painel do Lojista (Visão Geral, Perfil, Links, Catálogo, Assinatura)
-    │   ├── [slug]/             # Página Pública da Loja
-    │   ├── icon.svg            # Favicon oficial em SVG
-    │   ├── layout.tsx          # Root Layout com Metadados HTML e SEO
-    │   └── page.tsx            # Landing Page Institucional
-    ├── lib/
-    │   └── api.ts              # Cliente HTTP e utilitários de fetch/token
-    ├── public/
-    ├── package.json
-    └── tailwind.config.ts
-```
-
----
-
 ## 🔑 Credenciais para Testes Demonstrativos
 
 O projeto possui um script de *seed* que cria automaticamente duas contas de exemplo:
 
 ### **1. Lojista PRO (Pizzaria do Zé)**
-* **URL Pública**: `http://localhost:3000/pizzaria-do-ze`
+* **URL Pública em Produção**: [https://linkfacil-rho.vercel.app/pizzaria-do-ze](https://linkfacil-rho.vercel.app/pizzaria-do-ze)
 * **E-mail**: `lojista@pizzaria.com`
 * **Senha**: `123456`
 * *Recursos ativos*: 3 links, cor primária laranja (`#EA580C`) e 3 produtos no catálogo do WhatsApp.
 
 ### **2. Lojista GRATUITO (Doces da Maria)**
-* **URL Pública**: `http://localhost:3000/doces-da-maria`
+* **URL Pública em Produção**: [https://linkfacil-rho.vercel.app/doces-da-maria](https://linkfacil-rho.vercel.app/doces-da-maria)
 * **E-mail**: `contato@docesdamaria.com`
 * **Senha**: `123456`
 * *Recursos ativos*: 2 links, cor padrão e catálogo bloqueado.
@@ -104,48 +78,28 @@ O projeto possui um script de *seed* que cria automaticamente duas contas de exe
 
 ## ⚙️ Como Executar o Projeto Localmente
 
-### **Pré-requisitos**
-* Node.js (versão 18 ou superior)
-* npm instalado
-
----
-
-### **1. Executando o Backend (API REST)**
-
 ```bash
-# Entre na pasta do backend
+# Executar o backend (Porta 4000)
 cd backend
-
-# Instale as dependências
 npm install
+npm run db:push && npm run seed
+npm run dev
 
-# Execute as migrações do banco e o seed inicial
-npm run db:push
-npm run seed
-
-# Inicie o servidor de desenvolvimento (Porta 4000)
+# Executar o frontend (Porta 3000) em outro terminal
+cd frontend
+npm install
 npm run dev
 ```
 
 ---
 
-### **2. Executando o Frontend (Next.js)**
+## 🌐 Deploy em Produção
 
-```bash
-# Em um novo terminal, entre na pasta do frontend
-cd frontend
-
-# Instale as dependências
-npm install
-
-# Inicie o servidor de desenvolvimento (Porta 3000)
-npm run dev
-```
-
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador para acessar a aplicação.
+- **Frontend**: Hospedado na Vercel em [https://linkfacil-rho.vercel.app/](https://linkfacil-rho.vercel.app/)
+- **Backend API**: Hospedado no Render em [https://linkfacil.onrender.com/](https://linkfacil.onrender.com/)
 
 ---
 
 ## 🎓 Créditos Acadêmicos
 
-Desenvolvido para fins de aprendizado como atividade avaliativa no **Curso Técnico em Desenvolvimento de Sistemas**.
+Desenvolvido para fins de aprendizado por **Everton Nascimento Mancio** e **Rafael D'Angelo Gradilone Pontes** como atividade avaliativa do **Curso Técnico em Desenvolvimento de Sistemas**.

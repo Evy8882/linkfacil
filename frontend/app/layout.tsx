@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | LinkFácil'
   },
   description:
-    'Crie sua página única e personalizada no formato linkfacil.com/sua-loja. Organize links de contato e exiba um catálogo de produtos integrado ao WhatsApp.',
+    'Crie sua página única e personalizada no formato linkfacil-rho.vercel.app/sua-loja. Organize links de contato e exiba um catálogo de produtos integrado ao WhatsApp.',
   keywords: [
     'linkfacil',
     'centralizador de links',
@@ -28,7 +28,10 @@ export const metadata: Metadata = {
     'mini catálogo',
     'pequenos negócios'
   ],
-  authors: [{ name: 'LinkFácil' }],
+  authors: [
+    { name: "Everton Nascimento Mancio" },
+    { name: "Rafael D'Angelo Gradilone Pontes" }
+  ],
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://linkfacil.com',
+    url: 'https://linkfacil-rho.vercel.app',
     title: 'LinkFácil - Centralizador de Links & Catálogo no WhatsApp',
     description:
       'Plataforma para pequenos negócios organizarem seus links e exibirem catálogo de produtos com pedidos diretos no WhatsApp.',
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'LinkFácil - Centralizador de Links & Catálogo no WhatsApp',
-    description: 'Crie sua página linkfacil.com/sua-loja em minutos.'
+    description: 'Crie sua página linkfacil-rho.vercel.app/sua-loja em minutos.'
   }
 };
 

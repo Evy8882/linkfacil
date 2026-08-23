@@ -150,7 +150,7 @@ export default function SubscriptionPage() {
             </li>
             <li className="flex items-center gap-2.5 text-slate-300">
               <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              Slug exclusivo linkfacil.com/sua-loja
+              Slug exclusivo linkfacil-rho.vercel.app/sua-loja
             </li>
             <li className="flex items-center gap-2.5 text-slate-500 line-through">
               Catálogo de produtos (Bloqueado)

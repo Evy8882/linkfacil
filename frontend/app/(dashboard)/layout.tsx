@@ -120,7 +120,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 rel="noreferrer"
                 className="mt-1 text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 truncate"
               >
-                <span>linkfacil.com/{user.slug}</span>
+                <span>linkfacil-rho.vercel.app/{user.slug}</span>
                 <ExternalLink className="w-3 h-3 flex-shrink-0" />
               </a>
             </div>

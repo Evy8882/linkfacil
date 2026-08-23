@@ -56,7 +56,7 @@ export default function DashboardOverview() {
         <div>
           <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Sua Página Pública</span>
           <div className="mt-1 flex items-center gap-2">
-            <span className="text-lg font-bold text-white">linkfacil.com/{stats?.user.slug}</span>
+            <span className="text-lg font-bold text-white">linkfacil-rho.vercel.app/{stats?.user.slug}</span>
           </div>
         </div>
 

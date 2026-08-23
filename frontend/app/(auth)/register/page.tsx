@@ -127,7 +127,7 @@ export default function RegisterPage() {
               </label>
               <div className="flex rounded-xl bg-slate-900/90 border border-slate-700/80 overflow-hidden focus-within:border-blue-500">
                 <span className="bg-slate-800 text-slate-400 text-xs px-3 py-2.5 flex items-center border-r border-slate-700">
-                  linkfacil.com/
+                  linkfacil-rho.vercel.app/
                 </span>
                 <input
                   type="text"
