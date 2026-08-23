@@ -1,4 +1,13 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+function getApiBase(): string {
+  let envUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+  // Remove barras no final se houver
+  envUrl = envUrl.trim().replace(/\/+$/, '');
+  // Garante o sufixo /api
+  if (!envUrl.endsWith('/api')) {
+    envUrl = `${envUrl}/api`;
+  }
+  return envUrl;
+}
 
 export function getAuthToken(): string | null {
   if (typeof window !== 'undefined') {
@@ -21,6 +30,7 @@ export function removeAuthToken() {
 
 export async function fetchApi<T = any>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = getAuthToken();
+  const apiBase = getApiBase();
 
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -31,7 +41,9 @@ export async function fetchApi<T = any>(endpoint: string, options: RequestInit =
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const res = await fetch(`${API_BASE}${endpoint}`, {
+  const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+
+  const res = await fetch(`${apiBase}${cleanEndpoint}`, {
     ...options,
     headers
   });
