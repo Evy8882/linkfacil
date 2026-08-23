@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E0E7FF" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Squircle background -->
+  <rect x="32" y="32" width="448" height="448" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Link Icon vector -->
+  <g fill="none" stroke="url(#iconGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M208 304L304 208" />
+    <path d="M160 256L128 288C92.65 323.35 92.65 380.65 128 416C163.35 451.35 220.65 451.35 256 416L288 384" />
+    <path d="M352 256L384 224C419.35 188.65 419.35 131.35 384 96C348.65 60.65 291.35 60.65 256 96L224 128" />
+  </g>
+</svg>
