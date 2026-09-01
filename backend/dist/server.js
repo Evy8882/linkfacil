@@ -11,7 +11,12 @@ const prisma_1 = require("./config/prisma");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 4000;
-app.use((0, cors_1.default)());
+const corsOptions = {
+    origin: '*',
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+};
+app.use((0, cors_1.default)(corsOptions));
+app.options('*', (0, cors_1.default)(corsOptions));
 app.use(express_1.default.json());
 // API base path
 app.use('/api', routes_1.default);
