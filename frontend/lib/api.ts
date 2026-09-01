@@ -1,5 +1,5 @@
 function getApiBase(): string {
-  let envUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+  let envUrl = process.env.NEXT_PUBLIC_API_URL || 'https://linkfacil.onrender.com/api';
   // Remove barras no final se houver
   envUrl = envUrl.trim().replace(/\/+$/, '');
   // Garante o sufixo /api
